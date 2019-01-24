@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML and CSS
+   Tutorial 7
+   Case Problem 4
+
+   Millennium Computers Form
+   Author: Maria De Jesus Rizo
+   Date:   1.22.19
+  
+   Filename: mc_forms.css
+
+*/
+
+/* Form Styles */
+form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+}
+
+/* Form Layout Styles */
+div.object,
+div.options,
+div.yesNo {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+/* Fieldset Styles */
+fieldset {
+    border-radius: 10px 10px 10px 10px;
+    border-color: rgba(0, 0, 0, 0.555);
+    margin-top: 15px;
+}
+
+legend {
+    font-size: 1.4em;
+    padding: 0px 5px;
+}
+
+/* Control Styles */
+textarea {
+    width: 100%;
+}
+
+/* Div Styles */
+div.object,
+div.options,
+div.yesNo {
+    margin: 10px 0px;
+}
+
+
+/* Button Styles */
