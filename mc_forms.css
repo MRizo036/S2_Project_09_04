@@ -14,44 +14,107 @@
 */
 
 /* Form Styles */
+/* Styles within this section will affect the form element within the HTML document */
+/* The selector below states that the form element will be affected by styles listed within. The margin left and right auto allow for the element to be centered within its container while the width element states how much of its containers with the element will take up. */
 form {
     margin-left: auto;
     margin-right: auto;
-    width: 95%;
+    width: 90%;
 }
 
 /* Form Layout Styles */
+/* Styles within this section will affect the layout of elements within the form in the HTM document. */
+/* The selector below states that the div elements with the classes of object, options, and yesNo will be affected by the styles provided. The display flex property states that the elements will be displayed as felxboxes when rendered on the page. The flex flow property states that the flexboxes will be aligned in rows and will wrapp around one another when on the page. The webkit extensions added to te properties allow for more cross browser compatibility. */
 div.object,
 div.options,
 div.yesNo {
     display: flex;
+    display: -webkit-flex;
     flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
 }
 
+/* The selector below states that styles withinwill be applied to the fieldset element in the HTML document. The flex property provodes the growth rate of the flex boxes, the shrink rate, and the basis of the boxes. These rates are applied when the brwoser window is changes in size. */
+fieldset {
+    flex: 1 12 300px;
+    -webkit-flex: 1 1 150px;
+}
+
+/* The selector below states that all elements that are children of the div elements with classes of object, options, or yesNo will be affected by the styles provided. */
+div.object>*,
+div.options>*,
+div.yesNo>* {
+    flex: 1 1 200px;
+    -webkit-flex: 1 1 200px;
+}
 
 /* Fieldset Styles */
+/* Styles within this section will affect the fieldset elements in the HTML document. */
+/* The seletor below states that the fieldset element will be affected. The bordr radius property rounds teh corders of the border surrounding the element by specified dimensions. The border color property specifies the color of the borders. The margin top property adds a margin of 15px above the element. */
 fieldset {
     border-radius: 10px 10px 10px 10px;
     border-color: rgba(0, 0, 0, 0.555);
     margin-top: 15px;
 }
 
+/* The selector below states that the legend element will have text that is the 1.4 em in size and a padding of 0px on the top and bottom and 5px on the left and right. */
 legend {
     font-size: 1.4em;
     padding: 0px 5px;
 }
 
 /* Control Styles */
+/* Styles within this section will affect all control group elements within the HTML document. */
+/* The selector below states that textarea styles in the HTML document will have the properties within applied to them. */
 textarea {
     width: 100%;
 }
 
 /* Div Styles */
+/* Styles within this section will affect div elements within the HTML document. */
+/* The selector below states that div elements with a class of object, options, or yesNo will have the styles lisetd applied to them. */
 div.object,
 div.options,
 div.yesNo {
     margin: 10px 0px;
 }
 
+/* Validation Styles */
+/* Styles within this section deal with the validation of fields within the form of the HTML document. */
+/* The selector below states that the imput element, the select element, and the textarea element will hav styles liset applied to them when in the state of focus.The background property makes the background of the element the color specified.*/
+input:focus,
+select:focus,
+textarea:focus {
+    background-color: rgba(106, 228, 106, 0.692);
+}
+
+/* The selector below states that the input elements with ids of fName, lName, street, city, state, sip, and phone will be affected when in the state of focused and when data inputted into the fields is valid. The background property states that the background of the element will be the color specified and that the image provided will be displayed to the bottom right of its container while not repeating. */
+input#fName:focus:valid,
+input#lName:focus:valid,
+input#street:focus:valid,
+input#city:focus:valid,
+input#state:focus:valid,
+input#zip:focus:valid,
+input#phone:focus:valid {
+    background: rgba(106, 228, 106, 0.692) url(mc_go.png) bottom right/contain no-repeat;
+}
+
+/* The selector below states that the input elements with ids of fName, lName, street, city, state, sip, and phone will be affected when in the state of focused and when data inputted into the fields is invalid. */
+input#fName:focus:invalid,
+input#lName:focus:invalid,
+input#street:focus:invalid,
+input#city:focus:invalid,
+input#state:focus:invalid,
+input#zip:focus:invalid,
+input#phone:focus:invalid {
+    background: rgba(228, 134, 106, 0.692) url(mc_stop.png) bottom right/contain no-repeat;
+}
 
 /* Button Styles */
+/* Styles within this section will affect the button inputs of the HTML form. */
+/* The selector states that the div element with an id of buttons will be affected. The text align property aligns the text in the div to the center. */
+div#buttons {
+    text-align: center;
+    width: 100%;
+    margin: 5px 0px;
+}

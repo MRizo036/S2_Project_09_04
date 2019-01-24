@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 
+<!-- Beginning of HTML document. -->
 <html>
 <!--
       New Perspectives on HTML5 and CSS3, 7th Edition
@@ -13,15 +14,17 @@
       Filename:   index.html
 
 -->
+<!-- Information provided within the head of the document is used when rendering the browser. Meta elements provide the rowser with information of the document. The title element gives the page a title which is displayed in the browser tab. Both link and script elements allow you to style the manner in which the page is rendered and how users can interact with it. -->
 
 <head>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>Millenium Computers Form</title>
+      <title>Millennium Computers Form</title>
       <link rel="stylesheet" href="mc_styles.css" />
       <link rel="stylesheet" href="mc_forms.css" />
       <script src="mc_script.js"></script>
 </head>
+<!-- Beginning of content that will be visible to the user on the browser page. -->
 
 <body>
       <header>
@@ -35,55 +38,72 @@
                   </ul>
             </nav>
       </header>
+      <!-- Beginning of section element. -->
       <section>
+            <!-- Beginnng of form element.  -->
+            <!-- The form element allows for the creation of web forms which can be used to collect certain information from a user. This method allows for users and the person running the page to interact with one another. -->
             <form name="cForm" action="http://www.mill_computers.com/orders/process.cgi" method="POST">
-                  <fieldset>
+                  <!-- Beginning of Fieldset one. -->
+                  <!-- The fieldset element an element that allows for the grouping of fields that share a common purpose within the form as a whole. -->
+                  <fieldset id="first">
+                        <!-- The legend element describes the content that is placed within the fieldset element. -->
                         <legend>Customer Information</legend>
-
+                        <!-- The div element allows for the grouping of variou elements within a nonspecified container. The label element associates a text string with the label that it is placed next  to. The for element associates a label with a certain input. The input element creates a variety of different fields in which data can be entered by the users. The name attribute provides the field with a name while the id attribute allows for a certain input to be targeted with css. The type attribute states what type of field the input element will be. The required attribute states that the field must be filled in order for the form to be properly submitted.  -->
+                        <!-- Start div one. -->
                         <div class="object">
-                              <label for="fName">First Name</label>
+                              <label for="fName">First Name*</label>
                               <input name="fName" id="fName" type="text" required>
                         </div>
-
+                        <!-- End div one. -->
+                        <!-- The comment above applied to the rest of the elements within fieldset one. -->
+                        <!-- Start div two. -->
                         <div class="object">
-                              <label for="lName">Last Name</label>
+                              <label for="lName">Last Name*</label>
                               <input name="lName" id="lName" type="text" required>
                         </div>
-
+                        <!-- End div two. -->
+                        <!-- Start div three. -->
                         <div class="object">
-                              <label for="street">Street</label>
+                              <label for="street">Street*</label>
                               <input name="street" id="street" type="text" required>
                         </div>
-
+                        <!-- End div three. -->
+                        <!-- Start div four. -->
                         <div class="object">
-                              <label for="city">City</label>
+                              <label for="city">City*</label>
                               <input name="city" id="city" type="text" required>
                         </div>
-
+                        <!-- End div four. -->
+                        <!-- Start div five. -->
                         <div class="object">
-                              <label for="state">State</label>
+                              <label for="state">State*</label>
                               <input name="state" id="state" type="text" required>
                         </div>
-
+                        <!-- End div five. -->
+                        <!-- The pattern attribute provides the form with a certain manner in which data should be entered into the field. The placeholder attribute places text withn the field which hints to what shoudl be written within. This text is later overwritten when the user begins writing in the field. -->
+                        <!-- Start div six. -->
                         <div class="object">
-                              <label for="zip">Zip Code</label>
+                              <label for="zip">Zip Code*</label>
                               <input name="zip" id="zip" type="text" placeholder="nnnnn (-nnnn)" pattern="^\d{5}(-\d{4})?$"
                                     required>
                         </div>
-
+                        <!-- End div six. -->
+                        <!-- Start div seven. -->
                         <div class="object">
-                              <label for="phone">Phone Number</label>
+                              <label for="phone">Phone Number*</label>
                               <input name="phone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"
                                     required>
                         </div>
-
+                        <!-- End div seven. -->
+                        <!-- End of Fieldset one. -->
                   </fieldset>
 
 
-
-                  <fieldset>
-                        <legend>Order Form</legend>
-
+                  <!-- Beginning of Fieldset two. -->
+                  <fieldset id="second">
+                        <legend>Computer Components</legend>
+                        <!-- The select element provided the user with a list of possible options that they can chose from. The option element provides the values that a user can chose from within a select list. The value attribute provided the option with a particular value. -->
+                        <!-- Start div one. -->
                         <div class="options">
                               <label for="pSpeed">Processor Speed</label>
                               <select name="pSpeed" id="pSpeed">
@@ -92,7 +112,9 @@
                                     <option value="5.2 GHz">5.2 GHz</option>
                               </select>
                         </div>
-
+                        <!-- End div one. -->
+                        <!-- The comment from above applies to the rest of the select elements nested within this fieldset. -->
+                        <!-- Start div two. -->
                         <div class="options">
                               <label for="mem">Memory</label>
                               <select name="mem" id="mem">
@@ -102,7 +124,8 @@
                                     <option value="8 GB">8 GB</option>
                               </select>
                         </div>
-
+                        <!-- End div two. -->
+                        <!-- Start div three. -->
                         <div class="options">
                               <label for="monitor">Monitor Size</label>
                               <select name="monitor" id="monitor">
@@ -112,7 +135,8 @@
                                     <option value="21">"21</option>
                               </select>
                         </div>
-
+                        <!-- End div three. -->
+                        <!-- Start div four. -->
                         <div class="options">
                               <label for="hd">Hard Drive</label>
                               <select name="hd" id="hd">
@@ -123,40 +147,65 @@
                               </select>
 
                         </div>
-
+                        <!-- End div four. -->
+                        <!-- The type of radio provides the user with a button that they can click to in order to chose the corresponding option.  -->
+                        <!-- Start div one. -->
                         <div id="yesNo">
-                              <label for="dvd">DVD Burner</label>
-                              <label for="dvd">Yes</label>
-                              <input name="dvd" id="dvd" value="yes" type="radio">
-                              <label for="dvd">No</label>
-                              <input name="dvd" id="dvd" value="no" type="radio">
+                              <!-- Beginning of nested Fieldset one. -->
+                              <fieldset>
+                                    <label for="dvd">DVD Burner</label>
+                                    <label for="dvd">Yes</label>
+                                    <input name="dvd" id="dvd" value="yes" type="radio">
+                                    <label for="dvd">No</label>
+                                    <input name="dvd" id="dvd" value="no" type="radio">
+                              </fieldset>
+                              <!-- End of nested Fieldset one. -->
                         </div>
+                        <!-- End div one. -->
+                        <!-- Start div two. -->
                         <div id="yesNo">
-                              <label for="dvd">Tuner Card</label>
-                              <label for="tuner">Yes</label>
-                              <input name="tuner" id="tuner" value="yes" type="radio">
-                              <label for="tuner">No</label>
-                              <input name="tuner" id="tuner" value="no" type="radio">
+                              <!-- Beginning of nested Fieldset two. -->
+                              <fieldset>
+                                    <label for="dvd">Tuner Card</label>
+                                    <label for="tuner">Yes</label>
+                                    <input name="tuner" id="tuner" value="yes" type="radio">
+                                    <label for="tuner">No</label>
+                                    <input name="tuner" id="tuner" value="no" type="radio">
+                              </fieldset>
+                              <!-- End of nested Fieldset two. -->
                         </div>
+                        <!-- End div two. -->
+                        <!-- Start div three. -->
                         <div id="yesNo">
-                              <label for="mCard">Media Card Reader</label>
-                              <label for="mCard">Yes</label>
-                              <input name="mCard" id="mCard" value="yes" type="radio">
-                              <label for="mCard">No</label>
-                              <input name="mCard" id="mCard" value="no" type="radio">
+                              <!-- Beginning of nested Fieldset three. -->
+                              <fieldset>
+                                    <label for="mCard">Media Card Reader</label>
+                                    <label for="mCard">Yes</label>
+                                    <input name="mCard" id="mCard" value="yes" type="radio">
+                                    <label for="mCard">No</label>
+                                    <input name="mCard" id="mCard" value="no" type="radio">
+                              </fieldset>
+                              <!-- End of nested Fieldset three. -->
                         </div>
-
+                        <!-- End div three. -->
+                        <!-- The type of checkbox provided the user with a box that they can check in order to chose the corresponding option. -->
+                        <!-- Start div four. -->
                         <div id="yesNo">
                               <label for="checkBox">I would like a 24-month extended warranty</label>
                               <input name="checkBox" id="checkBox" type="checkbox">
                         </div>
+                        <!-- End div four. -->
+                        <!-- End of Fieldset two. -->
                   </fieldset>
-
-                  <fieldset>
+                  <!-- Beginning of Fieldset three. -->
+                  <fieldset id="third">
+                        <!-- The textarea element provides the user with a box field in which they can type in any information that they would like to, typically used for comments. -->
                         <legend>Additional Information or Comments</legend>
                         <textarea name="textBox" id="textBox"></textarea>
                   </fieldset>
+                  <!-- End of Fieldset three. -->
 
+                  <!-- The inputs below provide the users with various buttons that they can click with the action that they would like to be taken including sbmitting the form, canceling the order, or haveing them contacted. -->
                   <div id="buttons">
                         <input value="Send Order" type="submit">
 
@@ -164,10 +213,14 @@
 
                         <input value="Contact Me" type="button">
                   </div>
-
+                  <!-- End of form element. -->
             </form>
+            <!-- End of section element. -->
       </section>
+      <footer>Millennium Computers</footer>
+      <!-- End of content that will be visible to the user on the browser page. -->
 </body>
 
+<!-- End of HTML document.  -->
 
 </html>
